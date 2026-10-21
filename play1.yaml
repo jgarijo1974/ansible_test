@@ -1,0 +1,8 @@
+---
+- name: Mostrar nombre de host
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Sacar el hostname
+      ansible.builtin.debug:
+        msg: "El nombre de host es {{ ansible_hostname }}"
